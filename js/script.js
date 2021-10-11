@@ -65,7 +65,7 @@ for (let i = 0; i < iconBx.length; i++) {
 $("body").click(() => {
     $(".contentBx").removeClass('active');
     $(".iconBx").removeClass('active');
-    $("#content4").addClass('active');
+    $("#content5").addClass('active');
 });
 
 /* Adding active class on mouse click in FAQ section */
@@ -126,3 +126,16 @@ animation.reveal(".questions", { delay: 350, origin: "bottom" });
 // Footer
 animation.reveal(".footer p", { delay: 200, origin: "top" });
 animation.reveal(".footer .contact-socials", { delay: 200, origin: "top" });
+
+
+const arrowSvg = document.querySelectorAll(".question");
+
+arrowSvg.forEach((item) => {
+    const svg = document.createElement("svg");
+    svg.innerHTML =
+        `<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1em" height="1em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 17 17">
+        <path d="M2.16 6.246c.225 0 .45.062.65.196l6.229 4.156l6.037-4.197a1.175 1.175 0 0 1 1.304 1.958l-6.688 4.63a1.174 1.174 0 0 1-1.304.002l-6.88-4.589a1.178 1.178 0 0 1 .652-2.156z" fill="white" fill-rule="evenodd"/>
+        </svg>
+        `;
+    item.appendChild(svg)
+})
