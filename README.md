@@ -111,7 +111,7 @@ Project Link: [https://github.com/SilasRodrigues19/Axie-Infinity-LP](https://git
 [issues-url]: https://github.com/SilasRodrigues19/Axie-Infinity-LP/issues
 [license-shield]: https://img.shields.io/github/license/SilasRodrigues19/Axie-Infinity-LP.svg?style=for-the-badge
 [license-url]: https://github.com/SilasRodrigues19/Axie-Infinity-LP/blob/master/LICENSE
-[product-screenshot]: https://github.com/SilasRodrigues19/Axie-Infinity-LP/blob/master/img/preview.png
+[product-screenshot]: https://github.com/SilasRodrigues19/Axie-Infinity-LP/blob/main/img/preview.png
 
 <br><hr>
 [🔼 Back to top](#Axie-Infinity)
