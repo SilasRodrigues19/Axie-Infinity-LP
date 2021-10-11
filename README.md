@@ -8,7 +8,7 @@
 <br />
 <p align="center">
   <a href="https://axie-infinity-lp.vercel.app">
-    <img src="https://thecompassbr.com/wp-content/uploads/2021/09/logo00432.png" alt="Logo" width="80" height="80">
+    <img src="img/logo.png" alt="Logo" width="80" height="80">
   </a>
 
   <h3 align="center">Axie Infinity</h3>
