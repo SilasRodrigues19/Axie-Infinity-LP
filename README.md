@@ -8,7 +8,7 @@
 <br />
 <p align="center">
   <a href="https://axie-infinity-lp.vercel.app">
-    <img src="img/logo.png" alt="Logo" width="80" height="80">
+    <img src="img/logo.png" alt="Logo" width="200" height="120">
   </a>
 
   <h3 align="center">Axie Infinity</h3>
