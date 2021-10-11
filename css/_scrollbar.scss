@@ -1,0 +1,27 @@
+::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: -webkit-gradient(linear, left top, left bottom, from(var(--scrollbar)), to(#000));
+    background: -moz-gradient(linear, left top, left bottom, from(var(--scrollbar)), to(#000));
+    background: linear-gradient(360deg, var(--scrollbar), #000);
+    border-radius: 5px;
+    box-shadow: inset 1px 1px 1px hsla(0, 0%, 100%, .25), inset -2px -2px 2px rgba(0, 0, 0, .25);
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: -webkit-gradient(linear, left top, left bottom, from(#000), to(var(--scrollbar)));
+    background: -moz-gradient(linear, left top, left bottom, from(#000), to(var(--scrollbar)));
+    background: linear-gradient(360deg, #000, var(--scrollbar));
+}
+
+::-webkit-scrollbar-track {
+    background: linear-gradient(90deg, #201c29, #201c29 1px, #100e17 0, #100e17);
+}
+
+::selection {
+    background: #605080;
+    color: #FFF;
+}
