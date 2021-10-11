@@ -1,4 +1,3 @@
-@import url('https://fonts.googleapis.com/css2?family=Exo+2:wght@200&display=swap');
 @import './_variables';
 @import './functions';
 @import './scrollbar';
@@ -9,9 +8,7 @@
 }
 
 body:before {
-    @include backgroundBefore(absolute,
-    .05,
-    url('https://cdn.decrypt.co/wp-content/uploads/2020/12/axie-gID_1.png') no-repeat center / cover);
+    @include backgroundBefore(absolute, .05, url('../img/bg_home.png') no-repeat center / cover);
 }
 
 body {
@@ -164,7 +161,7 @@ h5 {
 
 #about:before {
     @include backgroundBefore(fixed,
-    .03,
+    .06,
     url('../img/overlay.jpg') no-repeat center / cover);
 }
 
@@ -269,7 +266,7 @@ h5 {
 #faq {
     max-height: 100vh;
     width: 80%;
-    margin: 10rem auto;
+    margin: 15rem auto;
     @include flexCenter(center);
     .title {
         margin: 2rem 0;
@@ -296,15 +293,17 @@ h5 {
         line-height: 3.5rem;
         font-size: 1.4rem;
         a {
+            color: $purple;
             font-weight: 600;
             text-decoration: none;
             &:hover {
+                text-decoration: underline;
                 opacity: .8;
             }
         }
     }
     .questions.active h3::before {
-        content: url('https://api.iconify.design/entypo/info-with-circle.svg?color=gray&height=20');
+        content: url('https://api.iconify.design/clarity/help-info-solid.svg?color=gray&height=25');
         position: relative;
         right: 20px;
     }
@@ -316,7 +315,7 @@ h5 {
         transition: transform .5s ease-in;
     }
     .questions.active svg {
-        transform: rotate(180deg);
+        transform: rotate(90deg);
         transition: .7s ease;
     }
 }

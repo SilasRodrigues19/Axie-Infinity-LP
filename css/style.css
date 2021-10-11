@@ -1,4 +1,3 @@
-@import url("https://fonts.googleapis.com/css2?family=Exo+2:wght@200&display=swap");
 ::-webkit-scrollbar {
   width: 10px;
   height: 10px;
@@ -43,7 +42,7 @@
 body:before {
   position: absolute;
   opacity: 0.05;
-  background: url("https://cdn.decrypt.co/wp-content/uploads/2020/12/axie-gID_1.png") no-repeat center/cover;
+  background: url("../img/bg_home.png") no-repeat center/cover;
   content: '';
   width: 100%;
   height: 100%;
@@ -247,7 +246,7 @@ h5 {
 
 #about:before {
   position: fixed;
-  opacity: 0.03;
+  opacity: 0.06;
   background: url("../img/overlay.jpg") no-repeat center/cover;
   content: '';
   width: 100%;
@@ -428,7 +427,7 @@ h5 {
 #faq {
   max-height: 100vh;
   width: 80%;
-  margin: 10rem auto;
+  margin: 15rem auto;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -481,16 +480,18 @@ h5 {
 }
 
 #faq .answer p a {
+  color: #470BA9;
   font-weight: 600;
   text-decoration: none;
 }
 
 #faq .answer p a:hover {
+  text-decoration: underline;
   opacity: .8;
 }
 
 #faq .questions.active h3::before {
-  content: url("https://api.iconify.design/entypo/info-with-circle.svg?color=gray&height=20");
+  content: url("https://api.iconify.design/clarity/help-info-solid.svg?color=gray&height=25");
   position: relative;
   right: 20px;
 }
@@ -509,8 +510,8 @@ h5 {
 }
 
 #faq .questions.active svg {
-  -webkit-transform: rotate(180deg);
-          transform: rotate(180deg);
+  -webkit-transform: rotate(90deg);
+          transform: rotate(90deg);
   -webkit-transition: .7s ease;
   transition: .7s ease;
 }
