@@ -48,7 +48,7 @@
 ## About The Project
 
 ### Preview
-[![Preview][product-screenshot]](axie-infinity-lp.vercel.app)
+[![Preview][product-screenshot]](https://axie-infinity-lp.vercel.app)
 
 This project was developed in order to practice SASS and some others techs and libraries 
 
