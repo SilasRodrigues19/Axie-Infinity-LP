@@ -1,11 +1,11 @@
 /* Header and Scrolling */
-const header = document.querySelector('header');
-const smooth = document.querySelector('#smoothScroll')
+const header = document.querySelector('header'),
+    smooth = document.querySelector('#smoothScroll');
 
 /* Partners */
-let iconBx = document.querySelectorAll('.iconBx');
-let contentBx = document.querySelectorAll('.contentBx');
-let body = document.querySelector('body');
+let iconBx = document.querySelectorAll('.iconBx'),
+    contentBx = document.querySelectorAll('.contentBx'),
+    body = document.querySelector('body');
 
 /* FAQ */
 let faqs = document.querySelectorAll(".questions");
@@ -122,6 +122,11 @@ animation.reveal(".iconBx", { delay: 350, origin: "bottom" });
 // FAQ Questions
 animation.reveal("#faq h1", { delay: 200, origin: "top" });
 animation.reveal(".questions", { delay: 350, origin: "bottom" });
+
+// Newsletter
+animation.reveal("#form h1", { delay: 400, origin: "top" });
+animation.reveal("#form p", { delay: 200, origin: "top" });
+animation.reveal("#form #email", { distance: "600px", delay: 600, origin: "right" });
 
 // Footer
 animation.reveal(".footer p", { delay: 200, origin: "top" });
