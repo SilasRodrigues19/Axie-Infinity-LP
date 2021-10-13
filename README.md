@@ -57,8 +57,6 @@ The website is divided into:
 * **About**: explain how the game Axie Infinity works.
 * **Partners**: fictitious partners who support the project.
 * **FAQ**: common questions with answers.
-
-Future sections
 * **Newsletter**: form to subscribe and receive notices about Axie Infinity.
 
 ### Built With
@@ -66,10 +64,15 @@ Future sections
 Technologies used in the project.
 
 ### Libraries
+* [JQuery](https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js)
+* [JQuery Validator](https://cdn.jsdelivr.net/npm/jquery-validation@1.17.0/dist/jquery.validate.min.js)
 * [Scroll Reveal](https://scrollrevealjs.org)
 
 ### Font Script
 * [Font Awesome](https://fontawesome.com)
+
+### Email Marketing
+* [Mail Chimp](https://mailchimp.com/pt-br/)
 
 <!-- CONTRIBUTING -->
 ## Contributing
