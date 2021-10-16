@@ -51,6 +51,10 @@ body:before {
   top: 0;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   font-size: 16px;
   -webkit-user-select: none;
@@ -87,6 +91,40 @@ h5 {
 
 .text-center {
   text-align: center;
+}
+
+/* Rewrite Swal */
+.swal2-popup {
+  background: rgba(17, 17, 17, 0.8);
+  -webkit-box-shadow: 0.1rem 0.1rem 1rem 0.01rem #5c94cd;
+          box-shadow: 0.1rem 0.1rem 1rem 0.01rem #5c94cd;
+}
+
+.swal2-html-container,
+.swal2-title {
+  color: #fff;
+}
+
+.swal2-styled.swal2-confirm {
+  border: 2px solid #5c94cd;
+  width: 25rem;
+  height: 3rem;
+  border-radius: 2rem;
+  -webkit-transition: background-color ease 2s;
+  transition: background-color ease 2s;
+  background-color: transparent;
+  color: #fff;
+}
+
+.swal2-styled.swal2-confirm:hover {
+  -webkit-transition: background-color ease 2s;
+  transition: background-color ease 2s;
+  background-color: #5c94cd;
+}
+
+.swal2-styled.swal2-confirm:focus {
+  -webkit-box-shadow: none;
+          box-shadow: none;
 }
 
 .header {
@@ -594,7 +632,7 @@ h5 {
 }
 
 #form input:focus + label + button {
-  opacity: 1;
+  display: none;
 }
 
 #form input:focus + label#email-error {
@@ -656,14 +694,14 @@ h5 {
   width: 120px;
   height: 4.2rem;
   border: 0;
-  border-radius: 4px;
+  border-radius: 0 50% 50% 0 / 80% 80%;
   font-size: 1em;
   background: #5c94cd;
   color: #fff;
   cursor: pointer;
-  outline: none;
+  opacity: 0;
   display: none;
-  opacity: 1;
+  outline: none;
   -webkit-transition: opacity 2.35s ease-out, width 0.5s ease-out, background 0.25s ease-out;
   transition: opacity 2.35s ease-out, width 0.5s ease-out, background 0.25s ease-out;
 }

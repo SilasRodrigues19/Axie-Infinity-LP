@@ -21,6 +21,10 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Exo+2:wght@200&display=swap" rel="stylesheet">
+    <!-- Animate CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@4.0.0/animate.min.css">
+    <!-- Sweet Alert CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@sweetalert2/theme-dark@4/dark.css">
     <!-- My Style -->
     <link rel="stylesheet" href="css/style.css">
     <!-- JQuery CDN -->
@@ -146,7 +150,7 @@
                 </div>
             </div>
 
-            <div class="contentBx active" id="content5">
+            <div class="contentBx active" id="defaultContent">
                 <div>
                     <div class="text">
                         <h2>Marcas que apoiam o nosso projeto.</h2>
@@ -232,7 +236,7 @@
             <p>Te enviaremos por e-mail todas as novidades sobre Axie Infinity.</p>
         </div>
         <form method="POST" action="https://epizy.us1.list-manage.com/subscribe/post?u=cdad479da082176899a6de32e&amp;id=34f9eeb918" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
-            <input type="email" id="email" name="EMAIL" required data-msg-email="Enter a valid email account!" onkeydown="validate()">
+            <input type="email" id="email" name="EMAIL" required data-msg-email="Enter a valid email account!" onblur="validate()">
             <label for="EMAIL" id="label-email">Seu melhor e-mail</label>
             <button id="button">
                 <input type="submit" value="Inscrever">
@@ -262,9 +266,13 @@
     <script src="https://code.iconify.design/2/2.0.4/iconify.min.js "></script>
     <!-- Scroll Reveal -->
     <script src="https://unpkg.com/scrollreveal@4.0.9/dist/scrollreveal.min.js"></script>
+    <!-- Sweet Alert -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/sweetalert2@10/dist/sweetalert2.min.js"></script>
+
     <!-- Form Validade -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/jquery-validation@1.17.0/dist/jquery.validate.min.js"></script>
+    <script src="js/animations.js"></script>
     <script src="js/validate.js"></script>
     <!-- My Script -->
     <script src="js/script.js "></script>
