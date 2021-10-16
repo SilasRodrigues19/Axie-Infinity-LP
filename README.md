@@ -67,6 +67,8 @@ Technologies used in the project.
 * [JQuery](https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js)
 * [JQuery Validator](https://cdn.jsdelivr.net/npm/jquery-validation@1.17.0/dist/jquery.validate.min.js)
 * [Scroll Reveal](https://scrollrevealjs.org)
+* [Sweet Alert](https://sweetalert2.github.io)
+* [Animate CSS](https://cdn.jsdelivr.net/npm/animate.css@4.0.0/animate.min.css)
 
 ### Font Script
 * [Font Awesome](https://fontawesome.com)

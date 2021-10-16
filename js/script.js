@@ -1,10 +1,11 @@
 /* Header and Scrolling */
-const header = document.querySelector('header'),
+let header = document.querySelector('header'),
     smooth = document.querySelector('#smoothScroll');
 
 /* Partners */
 let iconBx = document.querySelectorAll('.iconBx'),
     contentBx = document.querySelectorAll('.contentBx'),
+    defaultContent = document.querySelector('#defaultContent'),
     body = document.querySelector('body');
 
 /* FAQ */
@@ -14,37 +15,44 @@ let faqs = document.querySelectorAll(".questions");
 document.addEventListener('scroll', () => {
     let scroll_position = window.scrollY;
     if (scroll_position > 100) {
-        $(header).css('backgroundColor', '#111');
+        header.style.cssText = "background-color: #111";
     } else {
-        $(header).css('backgroundColor', 'transparent');
+        header.style.cssText = "background-color: transparent";
     }
 
     if (scroll_position > 500) {
-        $(smooth).css({ 'opacity': '1', 'visibility': 'visible' });
+        smooth.style.cssText = "opacity: 1; visibility: visible";
     } else {
-        $(smooth).css({ 'opacity': '0', 'visibility': 'hidden' });
+        smooth.style.cssText = "opacity: 0; visibility: hidden";
     }
 });
 
 /* Smooth scroll */
-jQuery(document).ready(($) => {
-    $("#smoothScroll").click(function(event) {
-        event.preventDefault();
-        $('html, body').animate({
-                scrollTop: 0,
-            },
-            2000);
-    });
 
+const menuLinks = document.querySelectorAll('.menu a[href^="#"]');
+const smoothScroll = document.querySelector('#smoothScroll').addEventListener('click', scrollToPosition);
 
-    $(".scroll").click(function(event) {
-        event.preventDefault();
-        $('html, body').animate({
-                scrollTop: $(this.hash).offset().top
-            },
-            1000);
+menuLinks.forEach(section => {
+    section.addEventListener('click', scrollTo);
+})
+
+function scrollTo(e) {
+    e.preventDefault();
+    const target = getScrollTop(e.target) - 55;
+    scrollToPosition(target);
+}
+
+function scrollToPosition(target) {
+    window.scroll({
+        top: target,
+        behavior: "smooth",
     });
-});
+}
+
+function getScrollTop(element) {
+    const id = element.getAttribute('href');
+    return document.querySelector(id).offsetTop;
+}
 
 
 /* Adding active class on mouse hover in partners section */
@@ -62,11 +70,16 @@ for (let i = 0; i < iconBx.length; i++) {
 }
 
 /* Removing current target active in partners section when clicked outside */
-$("body").click(() => {
-    $(".contentBx").removeClass('active');
-    $(".iconBx").removeClass('active');
-    $("#content5").addClass('active');
-});
+body.addEventListener('click', () => {
+    for (let i = 0; i < contentBx.length; i++) {
+        contentBx[i].className = 'contentBx';
+        for (let i = 0; i < iconBx.length; i++) {
+            iconBx[i].className = 'iconBx';
+        }
+    }
+    defaultContent.className = 'active';
+})
+
 
 /* Adding active class on mouse click in FAQ section */
 for (let i = 0; i < faqs.length; i++) {
@@ -81,57 +94,6 @@ for (let i = 0; i < faqs.length; i++) {
     })
 
 }
-
-// Scroll Reveal
-const animation = ScrollReveal({
-    origin: "top",
-    distance: "100px",
-    duration: 2000,
-    reset: true,
-});
-
-// Header
-animation.reveal(".scroll1", { delay: 200, origin: "right", reset: false });
-animation.reveal(".scroll2", { delay: 400, origin: "right", reset: false });
-animation.reveal(".scroll3", { delay: 600, origin: "right", reset: false });
-animation.reveal(".scroll4", { delay: 800, origin: "right", reset: false });
-animation.reveal(".logo", { delay: 1000, origin: "right", reset: false });
-
-// Home Content
-animation.reveal("#home h1", { distance: "400px", delay: 200, origin: "left", reset: false });
-animation.reveal("#home h3", { distance: "400px", delay: 500, origin: "left", reset: false });
-animation.reveal("#home h5", { distance: "400px", delay: 950, origin: "left", reset: false });
-animation.reveal("#home .btn-primary", { distance: "400px", delay: 1900, origin: "left", reset: false });
-
-// Home Icons
-animation.reveal(".icon1", { distance: "400px", delay: 3100, origin: "right", reset: false });
-animation.reveal(".icon2", { distance: "400px", delay: 3300, origin: "right", reset: false });
-animation.reveal(".icon3", { distance: "400px", delay: 3600, origin: "right", reset: false });
-animation.reveal(".images", { distance: "400px", delay: 950, origin: "right", reset: false });
-
-// About
-animation.reveal("#about h1", { delay: 200, origin: "top" });
-animation.reveal("#about p", { delay: 600, origin: "top" });
-
-// Partners Content
-animation.reveal("#partners h1", { distance: "250px", duration: 4500, origin: "left" });
-animation.reveal(".text", { origin: "right" });
-animation.reveal(".imgBox", { distance: "400px", origin: "left" });
-animation.reveal(".iconBx", { delay: 350, origin: "bottom" });
-
-// FAQ Questions
-animation.reveal("#faq h1", { delay: 200, origin: "top" });
-animation.reveal(".questions", { delay: 350, origin: "bottom" });
-
-// Newsletter
-animation.reveal("#form h1", { delay: 400, origin: "top" });
-animation.reveal("#form p", { delay: 200, origin: "top" });
-animation.reveal("#form #email", { distance: "600px", delay: 600, origin: "right" });
-
-// Footer
-animation.reveal(".footer p", { delay: 200, origin: "top" });
-animation.reveal(".footer .contact-socials", { delay: 200, origin: "top" });
-
 
 const arrowSvg = document.querySelectorAll(".question");
 
