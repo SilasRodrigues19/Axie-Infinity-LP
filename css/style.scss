@@ -8,11 +8,7 @@
 }
 
 body:before {
-    @include backgroundBefore(absolute, .05, url('../img/bg_home.png') no-repeat center / cover);
-}
-
-html {
-    scroll-behavior: smooth;
+    @include backgroundBefore(absolute, .02, url('../img/bg_home.webp') no-repeat center / cover);
 }
 
 body {
@@ -179,6 +175,7 @@ h5 {
             width: 36.5vw;
         }
         img:nth-of-type(2) {
+            opacity: .5;
             animation: spin 35s alternate infinite;
             z-index: -1;
         }
@@ -196,7 +193,7 @@ h5 {
 #about:before {
     @include backgroundBefore(fixed,
     .06,
-    url('../img/overlay.jpg') no-repeat center / cover);
+    url('../img/overlay.webp') no-repeat center / cover);
 }
 
 #about {
@@ -228,9 +225,6 @@ h5 {
     h1 {
         writing-mode: vertical-lr;
         letter-spacing: 1rem;
-        position: relative;
-        left: 1rem;
-        top: 10rem;
     }
     .icon {
         cursor: pointer;
@@ -300,7 +294,7 @@ h5 {
 #faq {
     max-height: 100vh;
     width: 80%;
-    margin: 20rem auto 25rem auto;
+    margin: 5rem auto 25rem auto;
     @include flexCenter(center);
     .title {
         margin: 2rem 0;
@@ -337,7 +331,7 @@ h5 {
         }
     }
     .questions.active h3::before {
-        content: url('https://api.iconify.design/clarity/help-info-solid.svg?color=gray&height=25');
+        content: url('https://api.iconify.design/akar-icons/chat-question.svg?color=darkgray&height=25');
         position: relative;
         right: 20px;
     }
@@ -346,10 +340,13 @@ h5 {
         animation: fade 1s ease-in-out;
     }
     .questions svg {
+        color: #fff;
+        width: 1.1em;
+        height: 1.1em;
         transition: transform .5s ease-in;
     }
     .questions.active svg {
-        transform: rotate(90deg);
+        transform: rotate(180deg);
         transition: .7s ease;
     }
 }
@@ -515,11 +512,6 @@ h5 {
         line-height: 1rem;
         visibility: hidden;
     }
-}
-
-.icon,
-.partners_content {
-    margin-top: 20rem;
 }
 
 @media only screen and (max-width: 780px) {

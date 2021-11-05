@@ -41,18 +41,14 @@
 
 body:before {
   position: absolute;
-  opacity: 0.05;
-  background: url("../img/bg_home.png") no-repeat center/cover;
+  opacity: 0.02;
+  background: url("../img/bg_home.webp") no-repeat center/cover;
   content: '';
   width: 100%;
   height: 100%;
   z-index: -1;
   left: 0;
   top: 0;
-}
-
-html {
-  scroll-behavior: smooth;
 }
 
 body {
@@ -266,6 +262,7 @@ h5 {
 }
 
 #home .images img:nth-of-type(2) {
+  opacity: .5;
   -webkit-animation: spin 35s alternate infinite;
           animation: spin 35s alternate infinite;
   z-index: -1;
@@ -285,7 +282,7 @@ h5 {
 #about:before {
   position: fixed;
   opacity: 0.06;
-  background: url("../img/overlay.jpg") no-repeat center/cover;
+  background: url("../img/overlay.webp") no-repeat center/cover;
   content: '';
   width: 100%;
   height: 100%;
@@ -343,9 +340,6 @@ h5 {
       -ms-writing-mode: tb-lr;
           writing-mode: vertical-lr;
   letter-spacing: 1rem;
-  position: relative;
-  left: 1rem;
-  top: 10rem;
 }
 
 #partners .icon {
@@ -465,7 +459,7 @@ h5 {
 #faq {
   max-height: 100vh;
   width: 80%;
-  margin: 20rem auto 25rem auto;
+  margin: 5rem auto 25rem auto;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -529,7 +523,7 @@ h5 {
 }
 
 #faq .questions.active h3::before {
-  content: url("https://api.iconify.design/clarity/help-info-solid.svg?color=gray&height=25");
+  content: url("https://api.iconify.design/akar-icons/chat-question.svg?color=darkgray&height=25");
   position: relative;
   right: 20px;
 }
@@ -541,6 +535,9 @@ h5 {
 }
 
 #faq .questions svg {
+  color: #fff;
+  width: 1.1em;
+  height: 1.1em;
   -webkit-transition: -webkit-transform .5s ease-in;
   transition: -webkit-transform .5s ease-in;
   transition: transform .5s ease-in;
@@ -548,8 +545,8 @@ h5 {
 }
 
 #faq .questions.active svg {
-  -webkit-transform: rotate(90deg);
-          transform: rotate(90deg);
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
   -webkit-transition: .7s ease;
   transition: .7s ease;
 }
@@ -785,11 +782,6 @@ h5 {
   text-align: center;
   line-height: 1rem;
   visibility: hidden;
-}
-
-.icon,
-.partners_content {
-  margin-top: 20rem;
 }
 
 @media only screen and (max-width: 780px) {
