@@ -27,20 +27,22 @@ email.addEventListener("keydown", (e) => {
     if (e.keyCode === 13) {
 
         e.preventDefault();
+
         Swal.fire({
-            title: 'Erro!',
-            icon: 'error',
+            title: 'Atenção!',
+            icon: 'info',
             text: 'Preencha com um e-mail válido e clique no botão Inscrever',
             showClass: {
                 popup: 'animate__animated animate__fadeInDown'
             },
             hideClass: {
                 popup: 'animate__animated animate__fadeOutUp'
-            }
+            },
         })
-    }
-});
 
+    }
+
+});
 
 button.addEventListener('click', (e) => {
     // e.preventDefault();
@@ -48,5 +50,6 @@ button.addEventListener('click', (e) => {
 
     setTimeout(() => {
         button.innerHTML = "Boa! agora você receberá as novidades."
+        button.disabled = true;
     }, 500);
 });

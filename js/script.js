@@ -8,6 +8,10 @@ let iconBx = document.querySelectorAll('.iconBx'),
     defaultContent = document.querySelector('#defaultContent'),
     body = document.querySelector('body');
 
+const ICONBX_LENGTH = 4;
+const CONTENTBX_LENGTH = 5;
+const FAQS_LENGTH = 6;
+
 /* FAQ */
 let faqs = document.querySelectorAll(".questions");
 
@@ -29,40 +33,30 @@ document.addEventListener('scroll', () => {
 
 /* Smooth scroll */
 
-const menuLinks = document.querySelectorAll('.menu a[href^="#"]');
-const smoothScroll = document.querySelector('#smoothScroll').addEventListener('click', scrollToPosition);
+$(".scroll").click(function(event) {
+    event.preventDefault();
+    $('html, body').animate({
+            scrollTop: $(this.hash).offset().top - 50
+        },
+        1000);
+});
 
-menuLinks.forEach(section => {
-    section.addEventListener('click', scrollTo);
-})
-
-function scrollTo(e) {
-    e.preventDefault();
-    const target = getScrollTop(e.target) - 55;
-    scrollToPosition(target);
-}
-
-function scrollToPosition(target) {
-    window.scroll({
-        top: target,
-        behavior: "smooth",
-    });
-}
-
-function getScrollTop(element) {
-    const id = element.getAttribute('href');
-    return document.querySelector(id).offsetTop;
-}
-
+$("#smoothScroll").click(function(event) {
+    event.preventDefault();
+    $('html, body').animate({
+            scrollTop: $(this.hash).offset().top
+        },
+        300);
+});
 
 /* Adding active class on mouse hover in partners section */
-for (let i = 0; i < iconBx.length; i++) {
+for (let i = 0; i < ICONBX_LENGTH; i++) {
     iconBx[i].addEventListener('mouseover', function() {
-        for (let i = 0; i < contentBx.length; i++) {
+        for (let i = 0; i < CONTENTBX_LENGTH; i++) {
             contentBx[i].className = 'contentBx';
         }
         document.getElementById(this.dataset.id).className = 'contentBx active';
-        for (let i = 0; i < iconBx.length; i++) {
+        for (let i = 0; i < ICONBX_LENGTH; i++) {
             iconBx[i].className = 'iconBx';
         }
         this.className = 'iconBx active';
@@ -71,9 +65,9 @@ for (let i = 0; i < iconBx.length; i++) {
 
 /* Removing current target active in partners section when clicked outside */
 body.addEventListener('click', () => {
-    for (let i = 0; i < contentBx.length; i++) {
+    for (let i = 0; i < CONTENTBX_LENGTH; i++) {
         contentBx[i].className = 'contentBx';
-        for (let i = 0; i < iconBx.length; i++) {
+        for (let i = 0; i < ICONBX_LENGTH; i++) {
             iconBx[i].className = 'iconBx';
         }
     }
@@ -82,9 +76,9 @@ body.addEventListener('click', () => {
 
 
 /* Adding active class on mouse click in FAQ section */
-for (let i = 0; i < faqs.length; i++) {
+for (let i = 0; i < FAQS_LENGTH; i++) {
     faqs[i].addEventListener('click', () => {
-        for (let i = 0; i < faqs.length; i++) {
+        for (let i = 0; i < FAQS_LENGTH; i++) {
             faqs[i].className = 'questions';
         }
         faqs[i].className = 'questions active';
@@ -98,11 +92,8 @@ for (let i = 0; i < faqs.length; i++) {
 const arrowSvg = document.querySelectorAll(".question");
 
 arrowSvg.forEach((item) => {
-    const svg = document.createElement("svg");
-    svg.innerHTML =
-        `<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1em" height="1em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 17 17">
-        <path d="M2.16 6.246c.225 0 .45.062.65.196l6.229 4.156l6.037-4.197a1.175 1.175 0 0 1 1.304 1.958l-6.688 4.63a1.174 1.174 0 0 1-1.304.002l-6.88-4.589a1.178 1.178 0 0 1 .652-2.156z" fill="white" fill-rule="evenodd"/>
-        </svg>
-        `;
-    item.appendChild(svg)
+    const span = document.createElement("span");
+    span.setAttribute('data-icon', 'si-glyph:arrow-down');
+    span.classList.add('iconify');
+    item.appendChild(span)
 })
