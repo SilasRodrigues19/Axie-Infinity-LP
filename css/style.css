@@ -74,14 +74,14 @@ h1 {
   color: #fff;
 }
 
-h3 {
-  font-size: 3rem;
-  color: #ccc;
-  margin: 1rem 0;
-}
-
 h2 {
   font-size: 2rem;
+}
+
+h3 {
+  font-size: 1.4rem;
+  color: #ccc;
+  margin: 1rem 0;
 }
 
 h5 {
@@ -633,7 +633,7 @@ h5 {
   display: none;
 }
 
-#form input:focus + label#email-error {
+#form input:focus + label#EMAIL-error {
   width: 100%;
   color: rgba(255, 0, 0, 0.7);
   -webkit-transition: ease 2s color;
@@ -671,7 +671,7 @@ h5 {
   transition: transform 0.25s ease-out, color 0.25s ease-out, -webkit-transform 0.25s ease-out;
 }
 
-#form label#email-error {
+#form label#EMAIL-error {
   width: 685px;
   color: #fff;
   -webkit-transition: ease 2s color;
