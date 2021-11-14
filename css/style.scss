@@ -23,7 +23,7 @@ p {
     color: #fff;
     margin: 3rem 0;
     line-height: 4rem;
-    font-size: 1.8rem;
+    font-size: 1.4rem;
 }
 
 h1 {
@@ -35,6 +35,10 @@ h3 {
     font-size: 3rem;
     color: #ccc;
     margin: 1rem 0;
+}
+
+h2 {
+    font-size: 2rem;
 }
 
 h5 {
@@ -275,10 +279,7 @@ h5 {
             opacity: 1;
             h2 {
                 color: #fff;
-                font-size: 3rem;
-            }
-            p {
-                font-size: 1.6rem;
+                font-size: 2rem;
             }
         }
         .text {
@@ -395,7 +396,7 @@ h5 {
                 display: none;
             }
         }
-        &:focus+label#EMAIL-error {
+        &:focus+label#email-error {
             width: 100%;
             color: rgba($secondaryColor, $alpha: .7);
             transition: ease 2s color;
@@ -424,7 +425,7 @@ h5 {
         letter-spacing: 1px;
         transition: transform 0.25s ease-out, color 0.25s ease-out;
     }
-    label#EMAIL-error {
+    label#email-error {
         width: 685px;
         color: #fff;
         transition: ease 2s color;
