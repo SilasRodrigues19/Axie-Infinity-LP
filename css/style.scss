@@ -39,7 +39,7 @@ h3 {
 
 h5 {
     color: #ccc;
-    font-size: 1.5rem;
+    font-size: 1rem;
 }
 
 .text-center {
@@ -395,7 +395,7 @@ h5 {
                 display: none;
             }
         }
-        &:focus+label#email-error {
+        &:focus+label#EMAIL-error {
             width: 100%;
             color: rgba($secondaryColor, $alpha: .7);
             transition: ease 2s color;
@@ -424,7 +424,7 @@ h5 {
         letter-spacing: 1px;
         transition: transform 0.25s ease-out, color 0.25s ease-out;
     }
-    label#email-error {
+    label#EMAIL-error {
         width: 685px;
         color: #fff;
         transition: ease 2s color;

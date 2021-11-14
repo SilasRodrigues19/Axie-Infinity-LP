@@ -82,7 +82,7 @@ h3 {
 
 h5 {
   color: #ccc;
-  font-size: 1.5rem;
+  font-size: 1rem;
 }
 
 .text-center {
@@ -632,7 +632,7 @@ h5 {
   display: none;
 }
 
-#form input:focus + label#email-error {
+#form input:focus + label#EMAIL-error {
   width: 100%;
   color: rgba(255, 0, 0, 0.7);
   -webkit-transition: ease 2s color;
@@ -670,7 +670,7 @@ h5 {
   transition: transform 0.25s ease-out, color 0.25s ease-out, -webkit-transform 0.25s ease-out;
 }
 
-#form label#email-error {
+#form label#EMAIL-error {
   width: 685px;
   color: #fff;
   -webkit-transition: ease 2s color;
