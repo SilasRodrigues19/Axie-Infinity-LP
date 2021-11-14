@@ -141,6 +141,11 @@ h5 {
   padding: 1rem 3rem;
 }
 
+.header img {
+  pointer-events: none;
+  height: 4.5rem;
+}
+
 .header nav {
   width: 50rem;
   text-transform: uppercase;
@@ -174,11 +179,6 @@ h5 {
   transition: ease 1s;
   background: #5c94cd;
   border-radius: 16% 84% 78% 22% / 47% 49% 51% 53%;
-}
-
-.header .logo img {
-  pointer-events: none;
-  height: 4.5rem;
 }
 
 .container {
