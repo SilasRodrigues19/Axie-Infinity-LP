@@ -525,7 +525,7 @@ h5 {
   opacity: .8;
 }
 
-#faq .questions.active h3::before {
+#faq .questions.active h1::before {
   content: url("https://api.iconify.design/akar-icons/chat-question.svg?color=darkgray&height=25");
   position: relative;
   right: 20px;
