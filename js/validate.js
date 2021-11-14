@@ -6,12 +6,12 @@ let isValid = $("#mc-embedded-subscribe-form").validate({
         }
     }
 });
-let email = document.getElementById('email'),
+let email = document.getElementById('EMAIL'),
     button = document.getElementById('button'),
     teste = document.getElementById('#email-error');
 
 validate = () => {
-    let email = document.getElementById("email").value;
+    let email = document.getElementById("EMAIL").value;
     let pattern = /^[^ ]+@[^ ]+\.[a-z]{2,3}$/;
 
     if (email.match(pattern) && isValid) {
