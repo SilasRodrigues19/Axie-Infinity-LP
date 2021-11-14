@@ -306,8 +306,9 @@ h5 {
         @include flexCenter(space-between);
         padding: 1.5rem 0;
     }
-    .question h3 {
+    .question h4 {
         font-size: 1.8rem;
+        color: #fff;
     }
     .answer {
         max-height: 0;

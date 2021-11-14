@@ -493,8 +493,9 @@ h5 {
   padding: 1.5rem 0;
 }
 
-#faq .question h3 {
+#faq .question h4 {
   font-size: 1.8rem;
+  color: #fff;
 }
 
 #faq .answer {
