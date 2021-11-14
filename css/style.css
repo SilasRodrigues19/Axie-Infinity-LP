@@ -76,6 +76,8 @@ h1 {
 
 h2 {
   font-size: 2rem;
+  color: #ccc;
+  margin: 1rem 0;
 }
 
 h3 {
@@ -490,7 +492,7 @@ h5 {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  padding: 1.5rem 0;
+  padding: 2.5rem 0;
 }
 
 #faq .question h4 {

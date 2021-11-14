@@ -16,9 +16,7 @@ animation.reveal(".logo", { delay: 1000, origin: "right", reset: false });
 
 // Home Content
 animation.reveal("#home h1", { distance: "400px", delay: 200, origin: "left", reset: false });
-animation.reveal("#home h3", { distance: "400px", delay: 500, origin: "left", reset: false });
-animation.reveal("#home h5", { distance: "400px", delay: 950, origin: "left", reset: false });
-animation.reveal("#home h2", { distance: "400px", delay: 500, origin: "left", reset: false });
+animation.reveal("#home h2", { distance: "400px", delay: 600, origin: "left", reset: false });
 animation.reveal("#home h3", { distance: "400px", delay: 950, origin: "left", reset: false });
 animation.reveal("#home .btn-primary", { distance: "400px", delay: 1900, origin: "left", reset: false });
 

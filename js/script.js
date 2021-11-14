@@ -46,7 +46,7 @@ $("#smoothScroll").click(function(event) {
     $('html, body').animate({
             scrollTop: $(this.hash).offset().top
         },
-        300);
+        200);
 });
 
 /* Adding active class on mouse hover in partners section */
