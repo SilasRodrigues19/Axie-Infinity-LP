@@ -83,6 +83,10 @@ h5 {
     width: 100%;
     @include flexCenter(space-between);
     padding: 1rem 3rem;
+    img {
+        pointer-events: none;
+        height: 4.5rem;
+    }
     nav {
         width: 50rem;
         text-transform: uppercase;
@@ -104,12 +108,6 @@ h5 {
                     }
                 }
             }
-        }
-    }
-    .logo {
-        img {
-            pointer-events: none;
-            height: 4.5rem;
         }
     }
 }
