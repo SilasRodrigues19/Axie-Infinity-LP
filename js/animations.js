@@ -43,7 +43,7 @@ animation.reveal(".questions", { delay: 350, origin: "bottom" });
 // Newsletter
 animation.reveal("#form h1", { delay: 400, origin: "top" });
 animation.reveal("#form p", { delay: 200, origin: "top" });
-animation.reveal("#form #email", { distance: "600px", delay: 600, origin: "right" });
+animation.reveal("#form #EMAIL", { distance: "600px", delay: 600, origin: "right" });
 
 // Footer
 animation.reveal(".footer p", { delay: 200, origin: "top" });
