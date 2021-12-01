@@ -6,6 +6,7 @@
 
 <!-- PROJECT LOGO -->
 <br />
+<samp>
 <p align="center">
   <a href="https://axie-infinity-lp.vercel.app">
     <img src="img/logo.png" alt="Logo" width="200" height="120">
